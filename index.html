@@ -3,33 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cute Interactive Page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h2>Feedback Form</h2>
+    <div class="container">
+      <h1>🌸 Welcome! 🌸</h1>
 
-    <form id="feedbackForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
-      <p class="error" id="nameError"></p>
+      <!-- Interactive Button -->
+      <button id="magicButton">Click Me!</button>
+      <p id="magicText" class="hidden">🎉 You found the magic text! 🎉</p>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
-      <p class="error" id="emailError"></p>
+      <!-- Form Section -->
+      <form id="cuteForm" novalidate>
+        <h2>💌 Sign Up</h2>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
 
-      <label for="feedback">Your Feedback:</label>
-      <textarea id="feedback" rows="4" required></textarea>
-      <p id="charCount">0 characters</p>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Choose a username"
+          required
+        />
 
-      <button type="submit">Submit</button>
-    </form>
-
-    <button id="colorButton">Change Background</button>
-    <button id="toggleButton">Show Message</button>
-    <p id="toggleMessage" style="display: none">
-      Thanks for visiting this page!
-    </p>
+        <p id="errorMessage"></p>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
     <script src="script.js"></script>
   </body>
