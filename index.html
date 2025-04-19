@@ -15,26 +15,23 @@
       <p id="magicText" class="hidden">🎀 Surprise! You're amazing! 🎀</p>
 
       <!-- Form Section -->
-      <form id="cuteForm" novalidate>
+      <form id="cuteForm">
         <h2>💌 Sign Up</h2>
         <label for="email">Email</label>
         <input
           type="email"
           id="email"
+          required
           placeholder="Enter your email"
           required
         />
 
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Choose a username"
-          required
-        />
+        <label for="username">Username:</label>
+        <input type="text" id="username" required />
+        <p id="usernameError" class="error"></p>
 
-        <p id="errorMessage"></p>
         <button type="submit">Submit</button>
+        <p id="errorMessage" class="error"></p>
       </form>
     </div>
 
